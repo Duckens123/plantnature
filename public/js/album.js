@@ -5,15 +5,11 @@ const div = document.querySelector('.banner-div');
 
 
 
-
-
-
 document.addEventListener("DOMContentLoaded", (e) => {
   e.preventDefault();
   if (page === null || page === undefined || isNaN(page)) {
     page = 1;
   }
-  alert(page);
   fetch(`http://127.0.0.1:3000/plants?page=${page}`)
     .then(res => res.json())
     .then(data => {
