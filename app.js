@@ -14,8 +14,13 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
   res.render("home", {
-    title: "My home page",
-    age: 26,
+    title: "Home page",
+  });
+});
+
+app.get("/about", (req, res) => {
+  res.render("about", {
+    title: "About",
   });
 });
 
